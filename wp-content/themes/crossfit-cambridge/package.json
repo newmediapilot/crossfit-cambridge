@@ -1,0 +1,34 @@
+{
+  "name": "killarney-lodge",
+  "version": "1.0.0",
+  "description": "killarney lodge theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo hello",
+    "start": "gulp watch",
+    "deploy": "git fetch; git pull; gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newmediapilot/killarney-lodge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newmediapilot/killarney-lodge/issues"
+  },
+  "homepage": "https://github.com/newmediapilot/killarney-lodge#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gulp": "^4.0.2",
+    "jquery": "^3.4.1"
+  }
+}
