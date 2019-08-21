@@ -9,6 +9,6 @@
 </head>
 <body <?php body_class(); ?>>
 
-<?php include 'top-nav-menu.php'; ?>
+<?php include 'top-nav.php'; ?>
 
 <!-- end header.php -->
