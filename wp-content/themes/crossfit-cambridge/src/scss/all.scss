@@ -3,6 +3,12 @@
 @import "./incudes/_google-fonts.scss";
 @import "./incudes/_top-nav.scss";
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
 .npm-carousel {
   width: 100%;
   background-color: black;
@@ -29,6 +35,53 @@
       position: relative;
       background-color: black;
       font-size: 4vw;
+    }
+  }
+}
+
+/**
+center quote text on main page
+ */
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 24px;
+  line-height: 2;
+  @media (max-width: 992px) {
+    font-size: 4vw;
+    br {
+      visibility: hidden;
+      display: none;
+    }
+  }
+}
+
+.claim-block {
+  position: relative;
+
+  h3 {
+    font-family: 'Aldrich', sans-serif;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    bottom: 0;
+  }
+
+  .wp-block-image {
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 992px) {
+      max-height: 380px;
+      overflow: hidden;
     }
   }
 }

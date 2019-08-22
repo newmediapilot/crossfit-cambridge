@@ -3,9 +3,10 @@
     content: "";
     display: block;
     height: 171px;
+    background-color: white;
     @media (max-width: 992px) {
       justify-content: center;
-      height: 218px;
+      height: 166px;
     }
   }
 }
@@ -19,12 +20,13 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, .9);
+  z-index: 5;
+  background-color: rgba(255, 255, 255, .95);
+  width: 100%;
+
   @media (max-width: 992px) {
     background-color: rgba(255, 255, 255, 1);
   }
-  width: 100%;
 
   .nmp-top-nav--top {
 
@@ -36,13 +38,21 @@
       img {
         height: 115px;
         padding: 1rem;
+        @media (max-width: 992px) {
+          height: 75px;
+          padding: .5rem;
+        }
       }
     }
+
+    // end logo
 
     //join button
     .top--right {
       padding: 1rem;
     }
+
+    // end join button
   }
 
   .nmp-top-nav--bottom {
@@ -63,6 +73,9 @@
 
       @media (max-width: 992px) {
         justify-content: center;
+        padding: $spacer/2;
+        font-size: 15px;
+        font-size: 4vw;
       }
     }
 
@@ -70,14 +83,17 @@
     .bottom--right {
       margin-right: 2rem;
       font-family: 'Michroma', sans-serif;
+      @media (max-width: 992px) {
+        margin-right: 0;
+        justify-content: center;
+      }
 
       .navbar {
-        @media (max-width: 992px) {
-          margin-right: 0;
-          justify-content: center;
-        }
+        justify-content: center;
       }
     }
+
+    //end bootstrap-menu
 
 
     @media (max-width: 992px) {
