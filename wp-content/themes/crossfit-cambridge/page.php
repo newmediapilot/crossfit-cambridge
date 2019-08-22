@@ -8,7 +8,7 @@ $blocks = wp_get_page_and_children($post_slug);
     <!-- begin page.php -->
     <!-- begin page.php -->
     <!-- begin page.php -->
-    <div class="container" tabindex="-1">
+    <div class="npm-carousel" tabindex="-1">
         <?php
         $sliderId = get_metadata('post', $master->ID, 'sliderId', true);
         if (!$sliderId) {
