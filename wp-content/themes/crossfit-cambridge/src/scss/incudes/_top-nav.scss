@@ -1,17 +1,47 @@
+.npm-carousel {
+  &:before {
+    content: "";
+    display: block;
+    height: 171px;
+    @media (max-width: 992px) {
+      justify-content: center;
+      height: 218px;
+    }
+  }
+}
+
 .npm-top-nav {
+
 
   display: flex;
   flex-direction: column;
 
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, .9);
+  @media (max-width: 992px) {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  width: 100%;
+
   .nmp-top-nav--top {
+
+    display: flex;
+    justify-content: space-between;
+
     // logo
     .top--left {
-
+      img {
+        height: 115px;
+        padding: 1rem;
+      }
     }
 
     //join button
     .top--right {
-
+      padding: 1rem;
     }
   }
 
@@ -22,16 +52,36 @@
     .bottom--left {
       display: flex;
       align-items: center;
-      padding-left: 2rem;
-      padding-right: 1rem;
+      padding: $spacer;
       color: white;
       background-color: black;
       font-family: 'Arial', sans-serif;
+
+      i {
+        margin-right: $spacer;
+      }
+
+      @media (max-width: 992px) {
+        justify-content: center;
+      }
     }
 
     // bootstrap-menu
-    .bottom-right {
+    .bottom--right {
+      margin-right: 2rem;
       font-family: 'Michroma', sans-serif;
+
+      .navbar {
+        @media (max-width: 992px) {
+          margin-right: 0;
+          justify-content: center;
+        }
+      }
+    }
+
+
+    @media (max-width: 992px) {
+      flex-direction: column;
     }
   }
 }
