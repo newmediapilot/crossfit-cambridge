@@ -16,6 +16,9 @@ $blocks = wp_get_page_and_children($post_slug);
         }
         echo do_shortcode('[wonderplugin_slider id=' . $sliderId . ']');
         ?>
+        <div class="npm-carousel--slogan">
+            <?php echo $post->post_content; ?>
+        </div>
     </div>
     <div class="container">
         <div class="row">
