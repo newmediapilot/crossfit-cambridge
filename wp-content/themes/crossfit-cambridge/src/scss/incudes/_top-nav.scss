@@ -1,0 +1,37 @@
+.npm-top-nav {
+
+  display: flex;
+  flex-direction: column;
+
+  .nmp-top-nav--top {
+    // logo
+    .top--left {
+
+    }
+
+    //join button
+    .top--right {
+
+    }
+  }
+
+  .nmp-top-nav--bottom {
+    display: flex;
+    justify-content: space-between;
+    // map link
+    .bottom--left {
+      display: flex;
+      align-items: center;
+      padding-left: 2rem;
+      padding-right: 1rem;
+      color: white;
+      background-color: black;
+      font-family: 'Arial', sans-serif;
+    }
+
+    // bootstrap-menu
+    .bottom-right {
+      font-family: 'Michroma', sans-serif;
+    }
+  }
+}
