@@ -42,17 +42,20 @@ body {
 /**
 center quote text on main page
  */
-h2 {
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 24px;
-  line-height: 2;
-  @media (max-width: 992px) {
-    font-size: 4vw;
-    br {
-      visibility: hidden;
-      display: none;
+.center-quote {
+  h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #666666;
+    font-size: 24px;
+    line-height: 2;
+    margin: 0;
+    @media (max-width: 992px) {
+      font-size: 4vw;
+      br {
+        visibility: hidden;
+        display: none;
+      }
     }
   }
 }
@@ -60,17 +63,20 @@ h2 {
 /**
 avatar quote text on main page
  */
-h3 {
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 36px;
-  line-height: 1;
-  @media (max-width: 992px) {
-    font-size: 4vw;
-    br {
-      visibility: hidden;
-      display: none;
+.avatar-quote {
+  h3 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #666666;
+    font-size: 36px;
+    line-height: 1;
+    margin: 0;
+    @media (max-width: 992px) {
+      font-size: 4vw;
+      br {
+        visibility: hidden;
+        display: none;
+      }
     }
   }
 }
@@ -99,6 +105,75 @@ h3 {
   }
 }
 
+
+.deal-block {
+  position: relative;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+  }
+
+  h3 {
+    font-family: 'Aldrich', sans-serif;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      color: white;
+
+      transition: all .5s;
+      transform: scale(1);
+      &:hover {
+        text-decoration: none;
+        transform: scale(1.1);
+      }
+
+      strong {
+        font-size: 48px;
+        font-weight: normal;
+        line-height: 2;
+      }
+
+      em {
+        font-size: 30px;
+        font-style: normal;
+      }
+    }
+  }
+
+  .wp-block-image {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      filter: blur(7px);
+    }
+  }
+}
+
 .avatar-image {
   justify-content: center;
   align-items: center;
@@ -118,10 +193,47 @@ h3 {
 .avatar-quote {
   p {
     margin-top: 1rem;
+
     a {
       color: black;
       font-weight: bold;
       text-transform: uppercase;
+    }
+  }
+}
+
+.join-cta {
+  background-color: black;
+  display: flex;
+  align-items: center;
+
+  h3 {
+    font-family: 'Aldrich', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.join-cta-button {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-transform: uppercase;
+      @extend .btn;
+      @extend .button-join;
+      @extend .btn-lg;
+
+      &:hover {
+        border-color: #fff;
+      }
     }
   }
 }
