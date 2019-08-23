@@ -6,7 +6,7 @@
     background-color: white;
     @media (max-width: 992px) {
       justify-content: center;
-      height: 166px;
+      height: 160px;
     }
   }
 }
@@ -35,6 +35,24 @@
 
     // logo
     .top--left {
+      .img--desktop {
+        visibility: visible;
+        display: inline-block;
+        @media (max-width: 992px) {
+          visibility: hidden;
+          display: none;
+        }
+      }
+
+      .img--mobile {
+        visibility: hidden;
+        display: none;
+        @media (max-width: 992px) {
+          visibility: visible;
+          display: inline-block;
+        }
+      }
+
       img {
         height: 115px;
         padding: 1rem;
@@ -50,6 +68,9 @@
     //join button
     .top--right {
       padding: 1rem;
+      @media (max-width: 992px) {
+        padding: .5rem;
+      }
     }
 
     // end join button

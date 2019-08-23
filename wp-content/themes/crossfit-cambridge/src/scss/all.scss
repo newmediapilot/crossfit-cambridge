@@ -57,6 +57,24 @@ h2 {
   }
 }
 
+/**
+avatar quote text on main page
+ */
+h3 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 36px;
+  line-height: 1;
+  @media (max-width: 992px) {
+    font-size: 4vw;
+    br {
+      visibility: hidden;
+      display: none;
+    }
+  }
+}
+
 .claim-block {
   position: relative;
 
@@ -77,6 +95,33 @@ h2 {
 
     img {
       width: 100%;
+    }
+  }
+}
+
+.avatar-image {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  .wp-block-image {
+    margin: 0;
+    padding: 0;
+    max-width: 150px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.avatar-quote {
+  p {
+    margin-top: 1rem;
+    a {
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
     }
   }
 }
