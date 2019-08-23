@@ -2,3 +2,24 @@
   @include button-variant(#ffffff, #000000, #000000);
   border-width: 2px;
 }
+
+.navbar {
+  background-color: #fff;
+}
+
+/* change the brand and text color */
+.navbar .navbar-brand,
+.navbar .navbar-text {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* change the link color */
+.navbar .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* change the color of active or hovered links */
+.navbar .nav-item.active .nav-link,
+.navbar .nav-item:hover .nav-link {
+  color: #000;
+}
