@@ -1,7 +1,8 @@
 <nav class="npm-top-nav">
     <div class="nmp-top-nav--top">
         <a href="/" class="top--left">
-            <img src="/wp-content/uploads/2019/08/CCLogo_BW_Main-300x266.png" alt="Crossfit Cambridge Logo">
+            <img class="img--desktop" src="/wp-content/uploads/2019/08/CCLogo_BW_Main-300x266.png" alt="Crossfit Cambridge Logo">
+            <img class="img--mobile" src="/wp-content/uploads/2019/08/CCLogo_bw-195x300.png" alt="Crossfit Cambridge Logo">
         </a>
         <div class="top--right">
             <a href="#" class="btn button-join btn-lg">Join Today</a>
