@@ -2,6 +2,7 @@
 @import "./incudes/_bootstrap-overrides.scss";
 @import "./incudes/_google-fonts.scss";
 @import "./incudes/_top-nav.scss";
+@import "./incudes/_footer-menu.scss";
 
 body {
   margin: 0;
@@ -129,6 +130,12 @@ avatar quote text on main page
     height: 100%;
     display: block;
     z-index: 1;
+
+    transition: all .5s;
+  }
+
+  &:hover:before {
+    background-color: rgba(0, 0, 0, 1);
   }
 
   h3 {
@@ -258,6 +265,25 @@ avatar quote text on main page
       &:hover {
         border-color: #fff;
       }
+    }
+  }
+}
+
+.packages-cta {
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+  h3 {
+    font-family: 'Aldrich', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    a {
+      color: black;
+      text-decoration: underline;
     }
   }
 }
