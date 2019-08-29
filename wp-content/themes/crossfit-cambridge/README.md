@@ -24,3 +24,9 @@ This will compile a one time export into the /dist directory
 ```
 npm run deploy
 ```
+#Local dev (OSX)
+```
+ssh -N -L 8888:127.0.0.1:80 -i /Users/marcinz/.ssh/LightsailDefaultKey-us-east-1.pem bitnami@3.90.254.169
+```
+#Local dev (Windows)
+https://docs.bitnami.com/aws/faq/get-started/access-phpmyadmin/
