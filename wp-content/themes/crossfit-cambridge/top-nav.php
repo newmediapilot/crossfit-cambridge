@@ -1,8 +1,25 @@
+<!-- begin bottom-nav-menu -->
+
+<?php $footer_menu = wp_get_nav_menu_items('Footer Menu'); ?>
+
+<?php
+$footer_menu_parents = array_filter($footer_menu, function ($footer_item) {
+    return $footer_item->menu_item_parent == "0";
+});
+foreach ($footer_menu_parents as $menu_item_parent) {
+    $menu_item_parent->menu_item_children = array_filter($footer_menu, function ($footer_item) use ($menu_item_parent) {
+        return $footer_item->menu_item_parent == $menu_item_parent->ID;
+    });
+}
+?>
+
 <nav class="npm-top-nav">
     <div class="nmp-top-nav--top">
         <a href="/" class="top--left">
-            <img class="img--desktop" src="/wp-content/uploads/2019/08/CCLogo_BW_Main-300x266.png" alt="Crossfit Cambridge Logo">
-            <img class="img--mobile" src="/wp-content/uploads/2019/08/CCLogo_bw-195x300.png" alt="Crossfit Cambridge Logo">
+            <img class="img--desktop" src="/wp-content/uploads/2019/08/CCLogo_BW_Main-300x266.png"
+                 alt="Crossfit Cambridge Logo">
+            <img class="img--mobile" src="/wp-content/uploads/2019/08/CCLogo_bw-195x300.png"
+                 alt="Crossfit Cambridge Logo">
         </a>
         <div class="top--right">
             <a href="#" class="btn button-join btn-lg">Join Today</a>
@@ -26,61 +43,27 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTargetContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Home
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                About
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Schedule
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Join Us
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Contact
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Action</a>
-                            </div>
-                        </li>
+                        <?php foreach ($footer_menu_parents as $footer_menu_parent) { ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"
+                                   href="<?php echo $footer_menu_parent->url ?>"
+                                   target="<?php echo $footer_menu_parent->target ?>"
+                                   title="<?php echo $footer_menu_parent->title ?>"
+                                   id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <?php echo $footer_menu_parent->title ?>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <?php foreach ($footer_menu_parent->menu_item_children as $menu_child) { ?>
+                                        <a class="dropdown-item" href="<?php echo $menu_child->url ?>"
+                                           target="<?php echo $menu_child->target ?>"
+                                           title="<?php echo $menu_child->title ?>">
+                                            <?php echo $menu_child->title ?>
+                                        </a>
+                                    <?php } ?>
+                                </div>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </nav>
