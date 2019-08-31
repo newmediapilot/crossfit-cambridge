@@ -1,8 +1,10 @@
 <!-- begin bottom-nav-menu -->
 
-<?php $footer_menu = wp_get_nav_menu_items('Footer Menu'); ?>
-
 <?php
+
+$common_menu = wp_get_nav_menu_items('Footer Menu');
+$footer_menu = wp_get_nav_menu_items('Footer Menu');
+
 $footer_menu_parents = array_filter($footer_menu, function ($footer_item) {
     return $footer_item->menu_item_parent == "0";
 });
@@ -22,7 +24,7 @@ foreach ($footer_menu_parents as $menu_item_parent) {
                  alt="Crossfit Cambridge Logo">
         </a>
         <div class="top--right">
-            <a href="#" class="btn button-join btn-lg">Join Today</a>
+            <a href="" target="_blank" class="btn button-join btn-lg">Join Today</a>
         </div>
     </div>
     <div class="nmp-top-nav--bottom">
@@ -45,23 +47,28 @@ foreach ($footer_menu_parents as $menu_item_parent) {
                     <ul class="navbar-nav mr-auto">
                         <?php foreach ($footer_menu_parents as $footer_menu_parent) { ?>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle"
+                                <a class="nav-link <?php if (!empty($footer_menu_parent->menu_item_children)) { ?>dropdown-toggle<?php } ?>"
                                    href="<?php echo $footer_menu_parent->url ?>"
                                    target="<?php echo $footer_menu_parent->target ?>"
                                    title="<?php echo $footer_menu_parent->title ?>"
-                                   id="navbarDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <?php if (!empty($footer_menu_parent->menu_item_children)) { ?>id="navbarDropdown"<?php } ?>
+                                   <?php if (!empty($footer_menu_parent->menu_item_children)) { ?>role="button"<?php } ?>
+                                   <?php if (!empty($footer_menu_parent->menu_item_children)) { ?>data-toggle="dropdown"<?php } ?>
+                                   <?php if (!empty($footer_menu_parent->menu_item_children)) { ?>aria-haspopup="true"<?php } ?>
+                                   <?php if (!empty($footer_menu_parent->menu_item_children)) { ?>aria-expanded="false"<?php } ?>>
                                     <?php echo $footer_menu_parent->title ?>
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <?php foreach ($footer_menu_parent->menu_item_children as $menu_child) { ?>
-                                        <a class="dropdown-item" href="<?php echo $menu_child->url ?>"
-                                           target="<?php echo $menu_child->target ?>"
-                                           title="<?php echo $menu_child->title ?>">
-                                            <?php echo $menu_child->title ?>
-                                        </a>
-                                    <?php } ?>
-                                </div>
+                                <?php if (!empty($footer_menu_parent->menu_item_children)) { ?>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <?php foreach ($footer_menu_parent->menu_item_children as $menu_child) { ?>
+                                            <a class="dropdown-item" href="<?php echo $menu_child->url ?>"
+                                               target="<?php echo $menu_child->target ?>"
+                                               title="<?php echo $menu_child->title ?>">
+                                                <?php echo $menu_child->title ?>
+                                            </a>
+                                        <?php } ?>
+                                    </div>
+                                <?php } ?>
                             </li>
                         <?php } ?>
                     </ul>
