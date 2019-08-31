@@ -2,7 +2,7 @@
 
 <?php
 
-$common_menu = wp_get_nav_menu_items('Footer Menu');
+$common_menu = wp_get_nav_menu_items('Special Links');
 $footer_menu = wp_get_nav_menu_items('Footer Menu');
 
 $footer_menu_parents = array_filter($footer_menu, function ($footer_item) {
@@ -24,7 +24,7 @@ foreach ($footer_menu_parents as $menu_item_parent) {
                  alt="Crossfit Cambridge Logo">
         </a>
         <div class="top--right">
-            <a href="" target="_blank" class="btn button-join btn-lg">Join Today</a>
+            <a href="<?php echo $common_menu[0]->url ?>" target="_blank" class="btn button-join btn-lg">Join Today</a>
         </div>
     </div>
     <div class="nmp-top-nav--bottom">

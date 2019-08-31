@@ -21,10 +21,10 @@ foreach ($footer_menu_parents as $menu_item_parent) {
             <a href="http://instagram.com/crossfitcambridge" title="Instagram" target="_blank"">
             <i class="fab fa-instagram"></i>
             </a>
-            <a href="http://instagram.com/crossfitcambridge" title="Facebook" target="_blank"">
+            <a href="https://www.facebook.com/crossfitcambridge/" title="Facebook" target="_blank"">
             <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="http://instagram.com/crossfitcambridge" title="Twitter" target="_blank"">
+            <a href="https://twitter.com/cf_cambridge" title="Twitter" target="_blank"">
             <i class="fab fa-twitter"></i>
             </a>
         </div>

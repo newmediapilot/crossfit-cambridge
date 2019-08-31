@@ -115,91 +115,108 @@ avatar quote text on main page
 
 .deal-block {
   position: relative;
-
-  @media (max-width: 992px) {
-    height: 400px;
-    overflow: hidden;
-    margin-bottom: 2*$spacer;
-  }
-
-  &:before {
-    content: " ";
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 1;
-
-    transition: all .5s;
-  }
-
-  &:hover:before {
-    background-color: rgba(0, 0, 0, 1);
-  }
-
-  h3 {
-    font-family: 'Aldrich', sans-serif;
-    color: white;
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-    margin-top: $spacer*3;
-
-    @media (max-width: 992px) {
-      margin-top: 0;
-      height: 100%;
-      justify-content: center;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-direction: column;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      color: white;
-
-      @media (max-width: 992px) {
-        justify-content: center;
-      }
-
-      will-change: transform;
-      transition: all .5s;
-      transform: scale(1);
-
-      &:hover {
-        text-decoration: none;
-        transform: scale(1.1);
-      }
-
-      strong {
-        font-size: 48px;
-        font-weight: normal;
-        line-height: 1;
-      }
-
-      em {
-        font-size: 30px;
-        font-style: normal;
-      }
-    }
-  }
+  overflow: hidden;
 
   .wp-block-image {
     margin: 0;
     padding: 0;
-    overflow: hidden;
 
-    img {
+    &:before {
+      content: '';
+      position: absolute;
       width: 100%;
-      filter: blur(7px);
+      height: 100%;
+      background-color: black;
+      opacity: .9;
+      margin: 0;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p:nth-child(1) {
+    font-family: 'Aldrich', sans-serif;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+
+    em {
+      text-decoration: none;
+      font-style: normal;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    strong {
+      font-weight: normal;
+      text-decoration: none;
+      font-style: normal;
+    }
+
+    del {
+      font-weight: normal;
+      text-decoration: none;
+      font-style: normal;
+      font-size: 20px;
+    }
+
+    a {
+      font-weight: normal;
+      text-decoration: none;
+      font-style: normal;
+      pointer-events: none;
+      margin-top: $spacer;
+      @extend .btn;
+      @extend .btn-lg;
+      @extend .button-join;
+    }
+  }
+
+  p:nth-child(2) {
+    a {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  /**
+  animation
+   */
+  p:nth-child(2) {
+    & + .wp-block-image {
+      transform: scale(1, 1);
+      transition: all 250ms ease-out;
+
+      &:before {
+        transition: all 250ms ease-out;
+      }
+    }
+  }
+
+  p:nth-child(2):hover {
+    & + .wp-block-image {
+      transform: scale(1.1, 1.1);
+
+      &:before {
+        opacity: .7;
+      }
     }
   }
 }
@@ -286,4 +303,23 @@ avatar quote text on main page
       text-decoration: underline;
     }
   }
+}
+
+.generic-image {
+  padding-top: $spacer;
+
+  .wp-block-image {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.generic-text {
+  padding-top: $spacer;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
 }
