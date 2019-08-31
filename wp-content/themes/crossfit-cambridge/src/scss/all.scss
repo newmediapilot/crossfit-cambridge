@@ -85,12 +85,6 @@ avatar quote text on main page
 .claim-block {
   position: relative;
 
-  @media (max-width: 992px) {
-    height: 600px;
-    overflow: hidden;
-    margin-bottom: 2*$spacer;
-  }
-
   h3 {
     font-family: 'Aldrich', sans-serif;
     position: absolute;
