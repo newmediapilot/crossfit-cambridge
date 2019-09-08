@@ -24,3 +24,7 @@ This will compile a one time export into the /dist directory
 ```
 npm run deploy
 ```
+#Tunnel
+```
+ssh -i "~/.ssh/CrossfitCambridge-us-east-1.pem" -L 127.0.0.1:8888:127.0.0.1:80 -L 127.0.0.1:33060:127.0.0.1:3306 bitnami@18.205.227.221
+```
