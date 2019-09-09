@@ -16,6 +16,17 @@ foreach ($footer_menu_parents as $menu_item_parent) {
 ?>
 
 <nav class="npm-top-nav">
+    <div class="npm-top-nav--info">
+        <div class="info--element">
+            <a href="https://goo.gl/maps/Z69xu49HCrzJrA8M6" target="_blank">
+                <i class="fas fa-map-marker-alt"></i>&nbsp;54 Guelph Ave, Cambridge, ON N3C 1A3
+            </a>
+        </div>
+        <div class="info--element">
+            <a href="tel:226-280-2328"><i class="fas fa-phone"></i>&nbsp;+1 (226) 280-2328</a>
+            <a href="mailto:info@crossfitcambridge.com"><i class="fas fa-envelope"></i>&nbsp;info@crossfitcambridge.com</a>
+        </div>
+    </div>
     <div class="npm-top-nav--items">
         <a href="/" class="npm-top-nav--logo">
             <img class="img--desktop" src="/wp-content/uploads/2019/09/CCLogo_BW_Main_invert-300x266.png"
