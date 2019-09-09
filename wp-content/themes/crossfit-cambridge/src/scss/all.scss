@@ -11,6 +11,11 @@ body {
   font-family: 'Play', sans-serif;
 }
 
+.npm-container {
+  width: 100%;
+  max-width: 100%;
+}
+
 .npm-carousel {
   width: 100%;
   background-color: black;
@@ -25,7 +30,7 @@ body {
     color: white;
     width: 100%;
     text-align: center;
-    padding: 1rem;
+    padding: $spacer*2;
     font-size: 35px;
     font-family: 'Play', sans-serif;
 
