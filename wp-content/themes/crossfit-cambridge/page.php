@@ -20,7 +20,7 @@ $blocks = wp_get_page_and_children($post_slug);
             <?php echo $post->post_content; ?>
         </div>
     </div>
-    <div class="container">
+    <div class="container npm-container">
         <div class="row">
             <?php foreach ($blocks as $child) { ?>
                 <div data-post-title="<?php echo $child->post_title; ?>"
