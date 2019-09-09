@@ -14,6 +14,11 @@ foreach ($footer_menu_parents as $menu_item_parent) {
 //var_dump($footer_menu_parents);
 ?>
 
+<a class="container footer-map"
+   title="Crossfit Cambridge Location" href="https://goo.gl/maps/Z69xu49HCrzJrA8M6"
+   target="_blank">
+</a>
+
 <footer class="container footer-menu">
     <div class="row">
         <!-- social items -->
