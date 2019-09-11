@@ -20,16 +20,16 @@ foreach ($footer_menu_parents as $menu_item_parent) {
         <div class="info--element">
             <a title="Click for map" href="https://goo.gl/maps/Z69xu49HCrzJrA8M6" target="_blank">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>&nbsp;54 Guelph Ave, Cambridge, ON N3C 1A3</span>
+                <span>54 Guelph Ave, Cambridge, ON N3C 1A3</span>
             </a>
         </div>
         <div class="info--element">
             <a title="Call +1 (226) 280-2328" href="tel:226-280-2328"><i class="fas fa-phone"></i>
-                <span>&nbsp;+1 (226) 280-2328</span>
+                &nbsp;<span>+1 (226) 280-2328</span>
             </a>
             <a title="Email info@crossfitcambridge.com" href="mailto:info@crossfitcambridge.com">
                 <i class="fas fa-envelope"></i>
-                <span>&nbsp;info@crossfitcambridge.com</span>
+                &nbsp;<span>info@crossfitcambridge.com</span>
             </a>
         </div>
     </div>

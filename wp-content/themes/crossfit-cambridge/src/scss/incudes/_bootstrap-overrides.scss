@@ -1,5 +1,6 @@
 .button-join {
   @include button-variant(#000000, #ffffff, #ffffff);
+  text-decoration: none;
   border-width: 2px;
 }
 
