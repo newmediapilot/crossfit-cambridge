@@ -13,6 +13,12 @@ body {
   font-family: 'Play', sans-serif;
 }
 
+a {
+  color: black;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
 .npm-container {
   width: 100%;
   max-width: 100%;
@@ -191,4 +197,18 @@ avatar quote text on main page
   display: flex;
   align-items: center;
   font-size: 18px;
+}
+
+.address-block {
+
+}
+
+.form-block {
+  .nf-form-fields-required {
+    margin-bottom: $spacer;
+  }
+
+  .nf-form-content {
+    padding: 0;
+  }
 }
