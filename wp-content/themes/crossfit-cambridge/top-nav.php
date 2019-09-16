@@ -28,9 +28,10 @@ foreach ($footer_menu_parents as $menu_item_parent) {
                href="tel:519-573-4373"><i class="fas fa-phone"></i>
                 &nbsp;<span>+1 (519) 573-4373</span>
             </a>
-            <a title="Email info@crossfitcambridge.com" href="mailto:info@crossfitcambridge.com">
+            <a title="Email info@crossfitcambridge.ca"
+               href="mailto:info@crossfitcambridge.ca">
                 <i class="fas fa-envelope"></i>
-                &nbsp;<span>info@crossfitcambridge.com</span>
+                &nbsp;<span>info@crossfitcambridge.ca</span>
             </a>
         </div>
     </div>
