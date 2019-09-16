@@ -24,8 +24,9 @@ foreach ($footer_menu_parents as $menu_item_parent) {
             </a>
         </div>
         <div class="info--element">
-            <a title="Call +1 (226) 280-2328" href="tel:226-280-2328"><i class="fas fa-phone"></i>
-                &nbsp;<span>+1 (226) 280-2328</span>
+            <a title="Call +1 (519) 573-4373"
+               href="tel:519-573-4373"><i class="fas fa-phone"></i>
+                &nbsp;<span>+1 (519) 573-4373</span>
             </a>
             <a title="Email info@crossfitcambridge.com" href="mailto:info@crossfitcambridge.com">
                 <i class="fas fa-envelope"></i>
