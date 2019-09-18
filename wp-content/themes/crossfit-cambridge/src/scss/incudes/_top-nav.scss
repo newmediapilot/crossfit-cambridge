@@ -24,14 +24,19 @@
   .npm-top-nav--info {
     background: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: $spacer/2;
 
     .info--element {
+
+      &:first-child {
+        margin-right: $spacer;
+      }
+
       a {
         padding: $spacer/4;
         color: white;
-        
+
         &:hover {
           text-decoration: none;
 
@@ -60,7 +65,7 @@
     display: flex;
     justify-content: space-between;
     padding: $spacer/2 $spacer;
-    align-items: center;
+    align-items: flex-end;
     background: black;
 
     @media (max-width: 992px) {
@@ -78,7 +83,7 @@
       }
 
       img {
-        max-height: 65px;
+        max-height: 105px;
       }
 
       @media (min-width: 993px) {
