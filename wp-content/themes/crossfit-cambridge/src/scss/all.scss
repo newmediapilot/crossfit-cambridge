@@ -215,3 +215,10 @@ avatar quote text on main page
     padding: 0;
   }
 }
+
+/**
+ie fix
+ */
+.wp-block-image, img {
+  min-height: 1px;
+}
