@@ -38,7 +38,7 @@ foreach ($footer_menu_parents as $menu_item_parent) {
         <div class="col-12 col-md-12 col-lg-10">
             <div class="row">
                 <?php foreach ($footer_menu_parents as $footer_menu_parent) { ?>
-                    <div class="footer--list col-12 col-md-6 col-lg-auto col-xl-auto">
+                    <div class="footer--list col-12 col-sm-6 col-md-6 col-lg-auto col-xl-auto">
                         <ul>
                             <li>
                                 <a href="<?php echo $footer_menu_parent->url ?>"
