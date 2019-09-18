@@ -28,3 +28,8 @@ npm run deploy
 ```
 ssh -i "~/.ssh/CrossfitCambridge-us-east-1.pem" -L 127.0.0.1:8888:127.0.0.1:80 -L 127.0.0.1:33060:127.0.0.1:3306 bitnami@18.205.227.221
 ```
+#Permissions
+```
+sudo find /home/bitnami/apps/wordpress/htdocs -type f -exec chmod 777 {} \;
+sudo find /home/bitnami/apps/wordpress/htdocs -type d -exec chmod 777 {} \;
+```
