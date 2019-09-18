@@ -2,11 +2,11 @@
   &:before {
     content: "";
     display: block;
-    height: 81px;
+    height: 121px;
     background-color: white;
     @media (max-width: 992px) {
       justify-content: center;
-      height: 102px;
+      height: 62px;
     }
   }
 }
@@ -27,11 +27,13 @@
     justify-content: flex-end;
     padding: $spacer/2;
 
-    .info--element {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 62px;
+    align-items: center;
 
-      &:first-child {
-        margin-right: $spacer;
-      }
+    .info--element {
 
       a {
         padding: $spacer/4;
@@ -69,7 +71,7 @@
     @media (max-width: 992px) {
       padding: $spacer;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
     /**
     logo
@@ -98,9 +100,11 @@
     .npm-to-nav--bootstrap {
       font-family: 'Play', sans-serif;
       padding: 0;
+
       @media (max-width: 992px) {
         margin-right: 0;
-        justify-content: center;
+        justify-content: left;
+
       }
 
       .navbar-toggler {
@@ -108,7 +112,7 @@
       }
 
       &.navbar {
-        justify-content: center;
+        justify-content: flex-start;
         background: black;
 
         .nav-link {
