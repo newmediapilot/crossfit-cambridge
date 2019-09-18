@@ -22,8 +22,6 @@ foreach ($footer_menu_parents as $menu_item_parent) {
                 <i class="fas fa-map-marker-alt"></i>
                 <span>54 Guelph Ave, Cambridge, ON N3C 1A3</span>
             </a>
-        </div>
-        <div class="info--element">
             <a title="Call +1 (519) 573-4373"
                href="tel:519-573-4373"><i class="fas fa-phone"></i>
                 &nbsp;<span>+1 (519) 573-4373</span>
