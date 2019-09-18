@@ -29,9 +29,6 @@ foreach ($footer_menu_parents as $menu_item_parent) {
             <a href="https://www.facebook.com/crossfitcambridge/" title="Facebook" target="_blank"">
             <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://twitter.com/cf_cambridge" title="Twitter" target="_blank"">
-            <i class="fab fa-twitter"></i>
-            </a>
         </div>
         <!-- end social items -->
     </div>
