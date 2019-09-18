@@ -198,8 +198,7 @@ avatar quote text on main page
 .generic-text {
   padding-top: $spacer;
   display: flex;
-  align-items: center;
-  font-size: 18px;
+  flex-direction: column;
 }
 
 .address-block {
