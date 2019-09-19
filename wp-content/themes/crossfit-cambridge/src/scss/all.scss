@@ -112,6 +112,21 @@ avatar quote text on main page
   }
 }
 
+.title-header {
+  background: linear-gradient(194deg, rgba(0, 0, 0, 1) 24%, rgba(38, 38, 38, 1) 52%);
+  text-shadow: 1px 1px black;
+  display: flex;
+  align-items: center;
+
+  h3 {
+    font-family: 'Play', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
 .join-cta {
   background-color: black;
   display: flex;
