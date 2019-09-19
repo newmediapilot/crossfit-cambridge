@@ -183,6 +183,72 @@ avatar quote text on main page
   }
 }
 
+.image-text-panel {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: $spacer*2;
+
+  h2 {
+    width: 100%;
+    margin-bottom: $spacer;
+    border-bottom: 1px solid #9E9E9E;
+    padding-bottom: $spacer;
+  }
+
+  .wp-block-image {
+    width: 30%;
+  }
+
+  p {
+    width: 70%;
+  }
+
+  &:nth-child(odd) {
+    .wp-block-image {
+      order: 1;
+      padding-right: $spacer;
+    }
+
+    p {
+      order: 2;
+    }
+  }
+
+  &:nth-child(even) {
+    .wp-block-image {
+      order: 2;
+      padding-left: $spacer;
+    }
+
+    p {
+      order: 1;
+    }
+  }
+
+
+  @media (min-width: 551px) and (max-width: 992px) {
+    .wp-block-image {
+      width: 50%;
+    }
+    p {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .wp-block-image {
+      width: 65%;
+      order: 1 !important;
+      padding: 0 !important;
+    }
+    p {
+      width: 100%;
+      order: 2 !important;
+    }
+  }
+
+}
+
 .generic-image {
   padding-top: $spacer;
 
