@@ -5,22 +5,7 @@
 @import "./incudes/_footer-menu.scss";
 @import "./incudes/_deal-block.scss";
 @import "./incudes/_claim-block.scss";
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: 'Play', sans-serif;
-}
-
-a {
-  color: black;
-  background-color: transparent;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
+@import "./incudes/_general.scss";
 
 .npm-container {
   width: 100%;
