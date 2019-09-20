@@ -96,17 +96,20 @@ element to fill area with nav inside
     logo
      */
     .npm-top-nav--logo {
-      .img--desktop {
-        display: none;
-        visibility: hidden;
-      }
 
-      img {
-        max-height: 105px;
+      @media (max-width: 992px) {
+        .img--desktop {
+          position: absolute;
+          height: 51px;
+          left: 80px;
+          top: 5px;
+          z-index: 100;
+        }
       }
 
       @media (min-width: 993px) {
         .img--desktop {
+          height: 105px;
           display: block;
           visibility: visible;
         }
