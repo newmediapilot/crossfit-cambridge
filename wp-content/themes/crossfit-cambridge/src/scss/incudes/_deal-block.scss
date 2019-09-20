@@ -1,124 +1,58 @@
 .deal-block {
-  position: relative;
-  overflow: hidden;
-  max-height: 400px;
+  padding: $spacer*2 $spacer;
+  text-align: center;
 
-  .wp-block-image {
-    margin: 0;
-    padding: 0;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      opacity: .9;
-      margin: 0;
-      left: 0;
-      top: 0;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  p {
-    margin: 0;
-  }
-
-  p:nth-child(2) {
-    font-family: 'Play', sans-serif;
-    color: white;
-    position: absolute;
-    z-index: 1;
+  table {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
+    border-collapse: collapse;
+    box-shadow: 10px 10px 34px 0 rgba(0, 0, 0, 0.3);
 
-    em {
-      text-decoration: none;
-      font-style: normal;
-      font-size: 40px;
-      font-weight: bold;
-    }
+    tbody {
 
-    strong {
-      font-weight: normal;
-      text-decoration: none;
-      font-style: normal;
-    }
-
-    del {
-      font-weight: normal;
-      text-decoration: none;
-      font-style: normal;
-      font-size: 20px;
-    }
-
-    a {
-      font-weight: normal;
-      text-decoration: none;
-      font-style: normal;
-      pointer-events: none;
-      margin-top: $spacer;
-      @extend .btn;
-      @extend .btn-lg;
-      @extend .button-join;
-    }
-  }
-
-  p:nth-child(1) {
-    a {
-      position: absolute;
-      z-index: 2;
-      display: block;
-      width: 100%;
-      height: 100%;
-      font-size: 0;
-      left: 0;
-      top: 0;
-    }
-  }
-
-  /**
-  animation
-   */
-  p:nth-child(1) {
-    & + p {
-      transform: scale(1, 1);
-      transition: all 350ms ease-out;
-      transition-delay: 350ms;
-    }
-
-    & + p + .wp-block-image {
-      transform: scale(1.02, 1.02);
-      transition: all 250ms ease-out;
-
-      &:before {
-        transition: all 250ms ease-out;
+      // header
+      tr:nth-child(1) {
+        font-size: 35px;
+        background: linear-gradient(180deg, #262626 24%, black 52%);
+        color: white;
       }
-    }
-  }
 
-  p:nth-child(1):hover {
-    & + p {
-      transform: scale(1.1, 1.1);
-      transition: all 250ms ease-out;
-    }
+      // header
 
-    & + p + .wp-block-image {
-      transform: scale(1.1, 1.1);
-
-      &:before {
-        opacity: .7;
+      // price
+      tr:nth-child(2) {
+        font-size: 30px;
+        color: black;
+        border-bottom: 1px solid #c8c8c8;
       }
+
+      // price
+
+      // condition
+
+      tr:nth-child(3) {
+        font-size: 30px;
+        color: black;
+        border-bottom: 1px solid #c8c8c8;
+      }
+
+      // condition
+
+      //  button
+      tr {
+        td {
+          padding: $spacer;
+
+          a {
+            cursor: pointer;
+            text-transform: uppercase;
+            @extend .btn;
+            @extend .button-buy;
+            @extend .btn-lg;
+          }
+        }
+      }
+
+      //  button
     }
   }
 }
