@@ -137,11 +137,21 @@ element to fill area with nav inside
         justify-content: flex-start;
         background: black;
 
-        .nav-link {
-          color: white;
+        .nav-item {
+          .nav-link {
+            color: white;
 
-          .button-join {
-            margin-left: $spacer;
+            .button-join {
+              margin-left: $spacer;
+            }
+
+            & + .dropdown-menu {
+              .dropdown-item {
+                &:active {
+                  background-color: black;
+                }
+              }
+            }
           }
         }
       }
