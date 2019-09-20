@@ -14,6 +14,28 @@ foreach ($footer_menu_parents as $menu_item_parent) {
 //var_dump($footer_menu_parents);
 ?>
 
+<div class="container">
+    <div class="row">
+        <div data-post-title="homepage-address-14"
+             class="address-block col-12 col-lg-5 pt-2 pb-1 pt-md-5 pb-md-4">
+            <h2>Drop In:</h2>
+            <p>54 Guelph Avenue Unit 5<br>
+                Cambridge, ON<br>
+                N3C 1A3
+                (<a href="https://goo.gl/maps/Z69xu49HCrzJrA8M6"
+                    target="_blank"
+                    rel="noreferrer noopener">Directions</a>)
+                <br>
+            </p>
+            <h2>Call Us:</h2>
+            <p>226-280-2328 (<a href="tel:226-280-2328">Call</a>)</p>
+        </div>
+        <div class="form-block col-12 col-lg-7 pt-2 pb-1 pt-md-5 pb-md-4">
+            <?php echo do_shortcode('[ninja_form id=1]'); ?>
+        </div>
+    </div>
+</div>
+
 <a class="container footer-map"
    title="Crossfit Cambridge Location" href="https://goo.gl/maps/Z69xu49HCrzJrA8M6"
    target="_blank">
