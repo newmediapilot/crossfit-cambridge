@@ -4,6 +4,18 @@
   border-width: 2px;
 }
 
+.button-buy {
+  @include button-variant(#000000, #000000, #000000);
+  text-decoration: none;
+  border-width: 2px;
+  transition: all .25s ease-out;
+  transform: scale(1, 1);
+
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+}
+
 .navbar {
   background-color: #fff;
 }
