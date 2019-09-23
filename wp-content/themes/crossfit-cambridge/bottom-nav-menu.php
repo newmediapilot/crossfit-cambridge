@@ -28,7 +28,7 @@ foreach ($footer_menu_parents as $menu_item_parent) {
                 <br>
             </p>
             <h2>Call Us:</h2>
-            <p>226-280-2328 (<a href="tel:226-280-2328">Call</a>)</p>
+            <p>+1 (519) 573-4373 (<a href="tel:519-573-4373">Call</a>)</p>
         </div>
         <div class="form-block col-12 col-lg-7 pt-2 pb-1 pt-md-5 pb-md-4">
             <?php echo do_shortcode('[ninja_form id=1]'); ?>
