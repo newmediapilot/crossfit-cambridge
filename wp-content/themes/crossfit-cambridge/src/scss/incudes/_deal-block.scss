@@ -11,10 +11,15 @@
 
       // header
       tr:nth-child(1) {
-        font-size: 35px;
+        font-size: 24px;
         background: linear-gradient(180deg, #262626 24%, black 52%);
         color: white;
         line-height: 1;
+        height: 80px;
+
+        td {
+          padding: $spacer;
+        }
       }
 
       // header
@@ -24,6 +29,10 @@
         font-size: 25px;
         color: black;
         border-bottom: 1px solid #c8c8c8;
+
+        td {
+          padding: $spacer;
+        }
       }
 
       // price
@@ -31,17 +40,36 @@
       // condition
 
       tr:nth-child(3) {
-        font-size: 25px;
+        font-size: 18px;
         color: black;
-        border-bottom: 1px solid #c8c8c8;
+        border-bottom: 1px solid #c8c8c8;;
+        height: 80px;
+
+        td {
+          padding: $spacer/2;
+        }
       }
 
       // condition
 
       //  button
-      tr {
+      tr:nth-child(4) {
+        height: 120px;
+
         td {
           padding: $spacer;
+          position: relative;
+
+          em {
+            text-decoration: none;
+            position: absolute;
+            left: 0;
+            text-align: center;
+            width: 100%;
+            bottom: 7px;
+            font-style: normal;
+            font-size: 14px;
+          }
 
           a {
             cursor: pointer;
@@ -54,6 +82,50 @@
       }
 
       //  button
+    }
+  }
+}
+
+.deal-block--contact {
+  padding: $spacer*2 $spacer;
+  text-align: center;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+
+    tbody {
+
+      // header
+      tr:nth-child(1) {
+        font-size: 35px;
+        background: linear-gradient(180deg, #262626 24%, black 52%);
+        color: white;
+        line-height: 1;
+        height: 80px;
+      }
+
+      // header
+
+      // price
+      tr:nth-child(2) {
+        td {
+          padding: $spacer;
+          height: 240px;
+
+          a {
+            cursor: pointer;
+            text-transform: uppercase;
+            @extend .btn;
+            @extend .button-buy;
+            @extend .btn-lg;
+          }
+        }
+      }
+
+      // price
+
     }
   }
 }
