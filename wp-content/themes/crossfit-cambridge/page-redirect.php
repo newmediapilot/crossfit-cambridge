@@ -6,7 +6,7 @@
 </head>
 <body>
 Redirecting please wait...
-<script>
+<script type="text/javascript">
     (setTimeout(function () {
         window.location.replace("https://crossfit-cambridge.squarespace.com");
     }, 3000)();
