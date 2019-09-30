@@ -8,9 +8,9 @@
 Redirecting please wait...
 <!-- begin redirect -->
 <script type="text/javascript">
-    (setTimeout(function () {
+    setTimeout(function () {
         window.location.replace("https://crossfit-cambridge.squarespace.com");
-    }, 3000)()
+    }, 3000);
 </script>
 <!-- end redirect -->
 </body>
