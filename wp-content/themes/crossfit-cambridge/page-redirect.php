@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Redirecting please wait...</title>
 </head>
 <body>
 Redirecting please wait...
