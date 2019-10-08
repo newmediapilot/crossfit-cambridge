@@ -32,6 +32,15 @@
                     'event_label': $curl
                 });
             }
+            /**
+             * map link
+             */
+            if ($curl.indexOf('goo.gl/maps') > -1) {
+                gtag('event', 'click', {
+                    'event_category': 'google_maps',
+                    'event_label': $curl
+                });
+            }
         });
         console.log('activate ga tracking..');
     })(jQuery);
