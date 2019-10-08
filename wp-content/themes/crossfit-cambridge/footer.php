@@ -18,15 +18,19 @@
              * zenplanner link
              */
             if ($curl.indexOf('crossfitcambridge.zenplanner.com') > -1) {
-                console.log('zenplanner', $curl);
-                ga('send', 'event', 'zenplanner', 'click', $curl);
+                gtag('event', 'click', {
+                    'event_category': 'zenplanner',
+                    'event_label': $curl
+                });
             }
             /**
              * mailto link
              */
             if ($curl.indexOf('mailto:') > -1) {
-                console.log('mailto', $curl);
-                ga('send', 'event', 'mailto', 'click', $curl);
+                gtag('event', 'click', {
+                    'event_category': 'mailto',
+                    'event_label': $curl
+                });
             }
         });
         console.log('activate ga tracking..');
