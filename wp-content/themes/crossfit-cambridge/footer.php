@@ -17,13 +17,15 @@
             /**
              * zenplanner link
              */
-            if ($curl.indexOf('crossfitcambridge.zenplanner.com')) {
+            if ($curl.indexOf('crossfitcambridge.zenplanner.com') > -1) {
+                console.log('zenplanner', $curl);
                 ga('send', 'event', 'zenplanner', 'click', $curl);
             }
             /**
              * mailto link
              */
-            if ($curl.indexOf('mailto:')) {
+            if ($curl.indexOf('mailto:') > -1) {
+                console.log('mailto', $curl);
                 ga('send', 'event', 'mailto', 'click', $curl);
             }
         });
