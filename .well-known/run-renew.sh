@@ -1,4 +1,4 @@
-DOMAIN=killarneylodge.com
+DOMAIN=crossfitcambridge.ca
 echo $DOMAIN
 sudo certbot -d www.${DOMAIN} -d ${DOMAIN} --webroot -w /home/bitnami/apps/wordpress/htdocs/ --preferred-challenges http certonly
 echo 'running certbot complete...'
