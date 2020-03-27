@@ -24,8 +24,8 @@ DOMAIN=crossfitcambridge.ca
 sudo certbot -d www.${DOMAIN} -d ${DOMAIN} --webroot -w /home/bitnami/apps/wordpress/htdocs/ --preferred-challenges http certonly
 sudo mv /opt/bitnami/apache2/conf/server.key /opt/bitnami/apache2/conf/server.key.old
 sudo mv /opt/bitnami/apache2/conf/server.crt /opt/bitnami/apache2/conf/server.crt.old
-sudo ln -s /etc/letsencrypt/live/${DOMAIN}/privkey.pem /opt/bitnami/apache2/conf/server.key
-sudo ln -s /etc/letsencrypt/live/${DOMAIN}/fullchain.pem /opt/bitnami/apache2/conf/server.crt
+sudo ln -s /etc/letsencrypt/live/www.${DOMAIN}.ca-0001/privkey.pem /opt/bitnami/apache2/conf/server.key
+sudo ln -s  /etc/letsencrypt/live/www.${DOMAIN}.ca-0001/fullchain.pem /opt/bitnami/apache2/conf/server.crt
 sudo /opt/bitnami/ctlscript.sh restart
 ```
 
