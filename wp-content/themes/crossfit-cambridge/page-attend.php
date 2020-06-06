@@ -1,19 +1,34 @@
-<?php
-global $post;
-$post_slug = $post->post_name;
-$master = wp_get_post_by_slug($post_slug, 'page');
-$blocks = wp_get_page_and_children($post_slug);
-?>
+<!--
+This is a special page which works by taking the query string and referencing
+an existing page with the name of the query string, then extracting the redirectTo
+parameter and heading to that URL on a 3000ms delay
+-->
 <?php get_header() ?>
-    <!-- begin page.php -->
-    <!-- begin page.php -->
-    <!-- begin page.php -->
-    <div class="container npm-container">
-        <div class="row">
-            <h2>Redirecting to class...please wait.</h2>
-        </div>
-    </div>
-    <!-- end page.php -->
-    <!-- end page.php -->
-    <!-- end page.php -->
+<div class="page-attend">
+    <h2 align="center">Redirecting you to the class... please wait.</h2>
+</div>
+<?php
+$id = $_GET["d"];
+if (!$id) {
+    $redirectTo = '/';
+}
+$time = wp_get_post_by_slug($id, 'page');
+$redirectTo = false;
+if ($time) {
+    $redirectTo = get_metadata('post', $time->ID, 'redirectTo', true);
+} else {
+    $redirectTo = '/';
+}
+?>
+<?php if ($redirectTo) { ?>
+    <script type="text/javascript">
+        (function () {
+            setTimeout(function () {
+                var redirectTo = "<?php echo $redirectTo ?>";
+                console.log('redirectTo', redirectTo);
+                window.location.href = redirectTo;
+            }, 3000);
+        })();
+    </script>
+<?php } ?>
 <?php get_footer() ?>
